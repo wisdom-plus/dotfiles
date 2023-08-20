@@ -4,4 +4,6 @@ if status is-interactive
   if test "$TERMINALAPP" = "alacritty"
     eval (zellij setup --generate-auto-start fish | string collect)
   end
+  
+  set -gx SHELL /usr/local/bin/fish
 end
