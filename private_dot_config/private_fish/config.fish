@@ -1,13 +1,21 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
+  # starship
   starship init fish | source
+  # zellij auto create in alacritty
   if test "$TERMINALAPP" = "alacritty"
     eval (zellij setup --generate-auto-start fish | string collect)
   end
-  
+
+  # env  
   set -gx SHELL /usr/local/bin/fish
   set -gx LSCOLORS gxfxcxdxbxegedabagacad
 
+  # peco setting
+  set fish_plugins theme peco
+  function fish_user_key_bindings 
+    bind \cw peco_select_history
+  end
 
   # git 
   abbr -a  ga  git add 
@@ -17,10 +25,10 @@ if status is-interactive
   abbr -a  gpself  git push origin HEAD 
   abbr -a  gf  git fetch 
   abbr -a  gr  git rebase 
-  abbr -a  gl "git log"
-  abbr -a  gco  git checkout 
-  abbr -a  gb "git branch"
-  abbr -a  gs "git switch"
+  abbr -a  gl git log
+  abbr -a  gco git checkout 
+  abbr -a  gb git branch
+  abbr -a  gs git switch
 
   # zellij
   abbr -a  zel  zellij -s  
