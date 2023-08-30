@@ -4,7 +4,6 @@ setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_NO_STORE
 setopt HIST_SAVE_NO_DUPS
-setopt HIST_VERIFY
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 setopt appendhistory
@@ -23,5 +22,4 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 # eval
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
-eval "$(anyenv init -)"
 
