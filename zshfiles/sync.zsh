@@ -22,4 +22,5 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 # eval
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+eval "$(rtx activate)"
 
