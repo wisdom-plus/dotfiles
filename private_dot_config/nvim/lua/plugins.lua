@@ -38,6 +38,7 @@ packer.startup(function(use)
   use { 'akinsho/bufferline.nvim', tag = 'v3.*' }
   use 'norcalli/nvim-colorizer.lua'
   use 'jose-elias-alvarez/null-ls.nvim'
+  use 'jay-babu/mason-null-ls.nvim'
   use 'MunifTanjim/prettier.nvim'
   use 'lewis6991/gitsigns.nvim'
   use 'williamboman/mason.nvim'
