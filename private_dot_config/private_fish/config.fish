@@ -10,6 +10,8 @@ if status is-interactive
   # env  
   set -gx SHELL /usr/local/bin/fish
   set -gx LSCOLORS gxfxcxdxbxegedabagacad
+  set -gx RTX_DATA_DIR $HOME/.rtx
+  set -gx RTX_CACHE_DIR $RTX_DATA_DIR/cache
 
   # peco setting
   set fish_plugins theme peco
@@ -74,3 +76,6 @@ if status is-interactive
   abbr -a  be  bundle exec 
   abbr -a  bi  bundle install -j4 
 end
+
+# rtx-cli
+rtx activate fish | source
