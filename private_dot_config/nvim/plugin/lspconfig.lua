@@ -53,41 +53,6 @@ protocol.CompletionItemKind = {
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-nvim_lsp.solargraph.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
-
-nvim_lsp.crystalline.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
-
-nvim_lsp.lua_ls.setup {
-  capabilitis = capabilities,
-  on_attach = on_attach
-}
-
-nvim_lsp.cssls.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
-
-nvim_lsp.tailwindcss.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
-
-nvim_lsp.html.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
-
-nvim_lsp.jsonls.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
-
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type

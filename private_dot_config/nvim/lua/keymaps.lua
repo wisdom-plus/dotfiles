@@ -1,6 +1,6 @@
 local keymap = vim.keymap
 vim.g.mapleader = " "
-vim.o.shell = '/bin/zsh'
+vim.o.shell = '/usr/local/bin/fish'
 keymap.set('n', 's', '_s')
 -- Increment/decrement
 keymap.set('n', '+', '<C-a>')
