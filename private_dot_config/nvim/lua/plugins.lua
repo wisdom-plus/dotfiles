@@ -87,4 +87,8 @@ packer.startup(function(use)
     'phaazon/hop.nvim',
     branch = 'v2'
   }
+  use 'Vonr/align.nvim'
+  use 'abecodes/tabout.nvim'
+  use 'chrisbra/Recover.vim'
+  use 'tversteeg/registers.nvim'
 end)
