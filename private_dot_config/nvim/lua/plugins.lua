@@ -91,4 +91,5 @@ packer.startup(function(use)
   use 'abecodes/tabout.nvim'
   use 'chrisbra/Recover.vim'
   use 'tversteeg/registers.nvim'
+  use 'folke/which-key.nvim'
 end)
