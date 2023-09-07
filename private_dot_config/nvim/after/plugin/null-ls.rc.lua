@@ -29,3 +29,5 @@ null_ls.setup({
     null_ls.builtins.diagnostics.fish
   }
 })
+
+vim.lsp.buf.format({ timeout_ms = 5000 })

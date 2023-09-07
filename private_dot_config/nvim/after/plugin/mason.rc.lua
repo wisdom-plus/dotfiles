@@ -15,11 +15,19 @@ mason_lspconfig.setup {
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+local on_attach = function(_, bufnr)
+  local bufopts = { silent = true, buffer = bufnr }
+    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
+    vim.keymap.set('n', 'gtD', vim.lsp.buf.type_definition, bufopts)
+    vim.keymap.set('n', 'grf', vim.lsp.buf.references, bufopts)
+    vim.keymap.set('n', '<space>p', vim.lsp.buf.format, bufopts)
+end
 
 local lspconfig = require('lspconfig')
 mason_lspconfig.setup_handlers {
   function(server_name)
     lspconfig[server_name].setup {
+      on_attach = on_attach,
       capabilities = capabilities
     }
   end,

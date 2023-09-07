@@ -92,4 +92,10 @@ packer.startup(function(use)
   use 'chrisbra/Recover.vim'
   use 'tversteeg/registers.nvim'
   use 'folke/which-key.nvim'
+  use {
+    'lambdalisue/guise.vim',
+    requires = {
+      'vim-denops/denops.vim'
+    }
+  }
 end)

@@ -84,6 +84,16 @@ _G.packer_plugins = {
     path = "/Users/tomoshi/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["Recover.vim"] = {
+    loaded = true,
+    path = "/Users/tomoshi/.local/share/nvim/site/pack/packer/start/Recover.vim",
+    url = "https://github.com/chrisbra/Recover.vim"
+  },
+  ["align.nvim"] = {
+    loaded = true,
+    path = "/Users/tomoshi/.local/share/nvim/site/pack/packer/start/align.nvim",
+    url = "https://github.com/Vonr/align.nvim"
+  },
   ["bufdelete.nvim"] = {
     loaded = true,
     path = "/Users/tomoshi/.local/share/nvim/site/pack/packer/start/bufdelete.nvim",
@@ -104,15 +114,35 @@ _G.packer_plugins = {
     path = "/Users/tomoshi/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
+  ["cmp-cmdline"] = {
+    loaded = true,
+    path = "/Users/tomoshi/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
+    url = "https://github.com/hrsh7th/cmp-cmdline"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/Users/tomoshi/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/Users/tomoshi/.local/share/nvim/site/pack/packer/start/cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/Users/tomoshi/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
   ["dashboard-nvim"] = {
     loaded = true,
     path = "/Users/tomoshi/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
+  },
+  ["denops.vim"] = {
+    loaded = true,
+    path = "/Users/tomoshi/.local/share/nvim/site/pack/packer/start/denops.vim",
+    url = "https://github.com/vim-denops/denops.vim"
   },
   ["fidget.nvim"] = {
     loaded = true,
@@ -134,10 +164,20 @@ _G.packer_plugins = {
     path = "/Users/tomoshi/.local/share/nvim/site/pack/packer/start/guess-indent.nvim",
     url = "https://github.com/nmac427/guess-indent.nvim"
   },
+  ["guise.vim"] = {
+    loaded = true,
+    path = "/Users/tomoshi/.local/share/nvim/site/pack/packer/start/guise.vim",
+    url = "https://github.com/lambdalisue/guise.vim"
+  },
   ["hlargs.nvim"] = {
     loaded = true,
     path = "/Users/tomoshi/.local/share/nvim/site/pack/packer/start/hlargs.nvim",
     url = "https://github.com/m-demare/hlargs.nvim"
+  },
+  ["hop.nvim"] = {
+    loaded = true,
+    path = "/Users/tomoshi/.local/share/nvim/site/pack/packer/start/hop.nvim",
+    url = "https://github.com/phaazon/hop.nvim"
   },
   ["impatient.nvim"] = {
     loaded = true,
@@ -173,6 +213,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/tomoshi/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
     url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason-null-ls.nvim"] = {
+    loaded = true,
+    path = "/Users/tomoshi/.local/share/nvim/site/pack/packer/start/mason-null-ls.nvim",
+    url = "https://github.com/jay-babu/mason-null-ls.nvim"
   },
   ["mason.nvim"] = {
     loaded = true,
@@ -279,6 +324,16 @@ _G.packer_plugins = {
     path = "/Users/tomoshi/.local/share/nvim/site/pack/packer/start/prettier.nvim",
     url = "https://github.com/MunifTanjim/prettier.nvim"
   },
+  ["registers.nvim"] = {
+    loaded = true,
+    path = "/Users/tomoshi/.local/share/nvim/site/pack/packer/start/registers.nvim",
+    url = "https://github.com/tversteeg/registers.nvim"
+  },
+  ["tabout.nvim"] = {
+    loaded = true,
+    path = "/Users/tomoshi/.local/share/nvim/site/pack/packer/start/tabout.nvim",
+    url = "https://github.com/abecodes/tabout.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/tomoshi/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -298,6 +353,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/tomoshi/.local/share/nvim/site/pack/packer/start/vim-illuminate",
     url = "https://github.com/RRethy/vim-illuminate"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/Users/tomoshi/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
   },
   ["winbar.nvim"] = {
     loaded = true,
