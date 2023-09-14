@@ -98,4 +98,5 @@ packer.startup(function(use)
       'vim-denops/denops.vim'
     }
   }
+  use { 'numToStr/Comment.nvim' }
 end)

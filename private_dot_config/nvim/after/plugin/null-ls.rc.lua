@@ -28,7 +28,13 @@ null_ls.setup({
     end
   end,
   sources = {
-    null_ls.builtins.diagnostics.fish
+    null_ls.builtins.diagnostics.fish,
+    null_ls.builtins.formatting.rubocop.with({
+      prefer_local = 'bundle_bin',
+      condition = function(utils)
+        return utils.root_has_file({ ".rubocop.yml" })
+      end
+    })
   }
 })
 
