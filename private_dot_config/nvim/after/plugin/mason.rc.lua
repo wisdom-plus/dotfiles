@@ -18,7 +18,7 @@ local on_attach = function(_, bufnr)
   vim.keymap.set('n', 'gtD', '<Cmd>lua vim.lsp.buf.type_definition()<CR>', bufopts)
   vim.keymap.set('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', bufopts)
   vim.keymap.set('n', 'grf', '<Cmd>lua vim.lsp.buf.references()<CR>', bufopts)
-  vim.keymap.set('n', '<space>p', '<Cmd>lua vim.lsp.buf.format()<CR>', bufopts)
+  vim.keymap.set('n', 'gj', '<Cmd>lua vim.lsp.buf.format()<CR>', bufopts)
 end
 
 local lspconfig = require('lspconfig')

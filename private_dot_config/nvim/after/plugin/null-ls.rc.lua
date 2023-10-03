@@ -5,13 +5,13 @@ if (not status2) then return end
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
-local lsp_formatting = function(bufnr)
-  vim.lsp.buf.format({
-    filter = function(client)
-      return client.name == "null-ls"
-    end,
-    bufnr = bufnr,
-  })
+local lsp_formatting = function()
+  vim.lsp.buf.format( { async=false } )
+end
+
+local conditional = function(fn)
+    local utils = require("null-ls.utils").make_conditional_utils()
+    return fn(utils)
 end
 
 null_ls.setup({
@@ -29,16 +29,18 @@ null_ls.setup({
   end,
   sources = {
     null_ls.builtins.diagnostics.fish,
-    null_ls.builtins.formatting.rubocop.with({
-      prefer_local = 'bundle_bin',
-      condition = function(utils)
-        return utils.root_has_file({ ".rubocop.yml" })
-      end
-    })
+    conditional(function(utils)
+      return utils.root_has_file('Gemfile')
+        and null_ls.builtins.formatting.rubocop.with({
+          command = "bundle",
+          args = vim.list_extend({ "exec", "rubocop", "--lsp" }, null_ls.builtins.formatting.rubocop._opts.args),
+        })
+      or null_ls.builtins.formatting.rubocop
+    end),
   }
 })
 
-vim.lsp.buf.format({ timeout_ms = 5000 })
+vim.lsp.buf.format({ timeout_ms = 10000 })
 
 mason_null_ls.setup({
   automatic_installation = true,
