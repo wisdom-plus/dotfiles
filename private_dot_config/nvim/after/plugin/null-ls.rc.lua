@@ -10,9 +10,11 @@ local lsp_formatting = function()
 end
 
 local conditional = function(fn)
-    local utils = require("null-ls.utils").make_conditional_utils()
-    return fn(utils)
+  local utils = require("null-ls.utils").make_conditional_utils()
+  return fn(utils)
 end
+
+require('mason').setup()
 
 null_ls.setup({
   on_attach = function(client, bufnr)
@@ -32,8 +34,11 @@ null_ls.setup({
     conditional(function(utils)
       return utils.root_has_file('Gemfile')
         and null_ls.builtins.formatting.rubocop.with({
-          command = "bundle",
-          args = vim.list_extend({ "exec", "rubocop", "--lsp" }, null_ls.builtins.formatting.rubocop._opts.args),
+          command = "rubocop",
+          args = vim.list_extend(
+            { "--lsp" },
+            null_ls.builtins.formatting.rubocop._opts.args
+          ),
         })
       or null_ls.builtins.formatting.rubocop
     end),

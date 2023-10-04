@@ -12,6 +12,7 @@ mason.setup({
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+
 local on_attach = function(_, bufnr)
   local bufopts = { noremap = true, silent = true, buffer = bufnr }
   vim.keymap.set('n', 'gi', '<Cmd>lua vim.lsp.buf.implementation()<CR>', bufopts)
