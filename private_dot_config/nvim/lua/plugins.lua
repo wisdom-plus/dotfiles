@@ -100,4 +100,5 @@ packer.startup(function(use)
   }
   use { 'numToStr/Comment.nvim' }
   use { 'RRethy/nvim-treesitter-endwise'}
+  use { 'github/copilot.vim' }
 end)
