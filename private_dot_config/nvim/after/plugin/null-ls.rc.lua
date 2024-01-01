@@ -1,4 +1,4 @@
-local status, null_ls = pcall(require, 'null-ls')
+local status, null_ls = pcall(require, 'none-ls')
 if (not status) then return end
 local status2, mason_null_ls = pcall(require, 'mason-null-ls')
 if (not status2) then return end

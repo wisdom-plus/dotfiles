@@ -1,104 +1,132 @@
-local status, packer = pcall(require, 'packer')
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+local status, lazy = pcall(require, 'lazy')
 if (not status) then
-  print('Packer is not installed')
+  print('lazy not install')
   return
 end
 
-vim.cmd [[packadd packer.nvim]]
-
-packer.startup(function(use)
-  use 'wbthomason/packer.nvim'
-  use 'nvim-lua/plenary.nvim'
-  use({ 'projekt0n/github-nvim-theme', tag = '0.0.x' })
-  use {
+local plugins = {
+  'nvim-lua/plenary.nvim';
+  { 'projekt0n/github-nvim-theme', version = '0.0.x' };
+  {
     'nvim-lualine/lualine.nvim',
-    retuires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
-  use 'kyazdani42/nvim-web-devicons'
-  use({ 'glepnir/lspsaga.nvim', branch = 'main' })
-  use 'onsails/lspkind-nvim'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'saadparwaiz1/cmp_luasnip'
-  use 'neovim/nvim-lspconfig'
-  use 'L3MON4D3/LuaSnip'
-  use {
+    dependencies = { 'kyazdani42/nvim-web-devicons', lazy = true }
+  };
+  'kyazdani42/nvim-web-devicons';
+  { 'glepnir/lspsaga.nvim', branch = 'main' };
+  'onsails/lspkind-nvim';
+  'hrsh7th/cmp-buffer';
+  'hrsh7th/cmp-nvim-lsp';
+  'hrsh7th/nvim-cmp';
+  'hrsh7th/cmp-path';
+  'hrsh7th/cmp-cmdline';
+  'saadparwaiz1/cmp_luasnip';
+  'neovim/nvim-lspconfig';
+  'L3MON4D3/LuaSnip';
+  {
     'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
-  }
-  use 'windwp/nvim-autopairs'
-  use 'windwp/nvim-ts-autotag'
-  use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',
-    requires = { { 'nvim-lua/plenary.nvim' } }
-  }
-  use { 'akinsho/bufferline.nvim', tag = 'v3.*' }
-  use 'norcalli/nvim-colorizer.lua'
-  use 'jose-elias-alvarez/null-ls.nvim'
-  use 'jay-babu/mason-null-ls.nvim'
-  use 'MunifTanjim/prettier.nvim'
-  use 'lewis6991/gitsigns.nvim'
-  use 'williamboman/mason.nvim'
-  use 'williamboman/mason-lspconfig.nvim'
-  use { "akinsho/toggleterm.nvim", tag = '*' }
-  use { 's1n7ax/nvim-window-picker' }
-  use {
+    build = ':TSUpdate'
+  };
+  'windwp/nvim-autopairs';
+  'windwp/nvim-ts-autotag';
+  {
+    'nvim-telescope/telescope.nvim', version = '0.1.5',
+    dependencies = { { 'nvim-lua/plenary.nvim' } }
+  };
+  { 'akinsho/bufferline.nvim', version = 'v3.*' };
+  'norcalli/nvim-colorizer.lua';
+  'nvimtools/none-ls.nvim';
+  'jay-babu/mason-null-ls.nvim';
+  'MunifTanjim/prettier.nvim';
+  'lewis6991/gitsigns.nvim';
+  'williamboman/mason.nvim';
+  'williamboman/mason-lspconfig.nvim';
+  { "akinsho/toggleterm.nvim", version = '*' };
+  { 's1n7ax/nvim-window-picker' };
+  {
     'nvim-neo-tree/neo-tree.nvim',
     branch = "v2.x",
-    requires = {
+    dependencies = {
       "MunifTanjim/nui.nvim"
     }
-  }
-  use { 'fgheng/winbar.nvim' }
-  use { 'glepnir/dashboard-nvim' }
-  use 'lewis6991/impatient.nvim'
-  use "petertriho/nvim-scrollbar"
-  use "Pocco81/AbbrevMan.nvim"
-  use 'Shatur/neovim-session-manager'
-  use 'famiu/bufdelete.nvim'
-  use 'rcarriga/nvim-notify'
-  use 'nmac427/guess-indent.nvim'
-  use {
+  };
+  'fgheng/winbar.nvim';
+  'glepnir/dashboard-nvim';
+  'lewis6991/impatient.nvim';
+  "petertriho/nvim-scrollbar";
+  'Shatur/neovim-session-manager';
+  'famiu/bufdelete.nvim';
+  'rcarriga/nvim-notify';
+  'nmac427/guess-indent.nvim';
+  {
     'j-hui/fidget.nvim',
-    tag = 'legacy'
-  }
-  use 'm-demare/hlargs.nvim'
-  use 'RRethy/vim-illuminate'
-  use {
+  };
+  'm-demare/hlargs.nvim';
+  'RRethy/vim-illuminate';
+  {
     'mvllow/modes.nvim',
-    tag = 'v0.2.0'
-  }
-  use 'kevinhwang91/nvim-hlslens'
-  use 'lukas-reineke/indent-blankline.nvim'
-  use 'fei6409/log-highlight.nvim'
-  use {
+    version = 'v0.2.0'
+  };
+  'kevinhwang91/nvim-hlslens';
+  'lukas-reineke/indent-blankline.nvim';
+  'fei6409/log-highlight.nvim';
+  {
     'sudormrfbin/cheatsheet.nvim',
-    requires = {
+    dependencies = {
       { 'nvim-telescope/telescope.nvim' },
       { 'nvim-lua/popup.nvim' },
       { 'nvim-lua/plenary.nvim' }
     }
-  }
-  use 'xiyaowong/transparent.nvim'
-  use {
+  };
+  'xiyaowong/transparent.nvim';
+  {
     'phaazon/hop.nvim',
     branch = 'v2'
-  }
-  use 'Vonr/align.nvim'
-  use 'abecodes/tabout.nvim'
-  use 'chrisbra/Recover.vim'
-  use 'tversteeg/registers.nvim'
-  use 'folke/which-key.nvim'
-  use {
+  };
+  'Vonr/align.nvim';
+  'abecodes/tabout.nvim';
+  'chrisbra/Recover.vim';
+  'tversteeg/registers.nvim';
+  'folke/which-key.nvim';
+  {
     'lambdalisue/guise.vim',
-    requires = {
+    dependencies = {
       'vim-denops/denops.vim'
     }
-  }
-  use { 'numToStr/Comment.nvim' }
-  use { 'RRethy/nvim-treesitter-endwise'}
-  use { 'github/copilot.vim' }
-end)
+  };
+  'numToStr/Comment.nvim';
+  'RRethy/nvim-treesitter-endwise';
+  'github/copilot.vim';
+}
+
+local opt = {
+  performance = {
+    rtp = {
+      disabled_plugins = {
+        'gzip',
+        'matchit',
+        -- 'matchparen',
+        -- 'netewPlugin',
+        'tarPlugin',
+        'tohtml',
+        'tutor',
+        'zipPlugin',
+      },
+    },
+  },
+}
+
+lazy.setup(plugins, opt)
+
