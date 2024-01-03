@@ -1,0 +1,336 @@
+{
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.autoSave": "onWindowChange",
+    "breadcrumbs.enabled": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.tabSize": 2,
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false,
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "editor.suggestSelection": "first",
+    "[shellscript]": {
+        "editor.detectIndentation": false,
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "foxundermoon.shell-format",
+    },
+    "[graphql]": {
+        "editor.formatOnSave": true
+    },
+    "[javascript]": {
+        "editor.detectIndentation": false,
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true
+    },
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "[javascriptreact]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.formatOnSave": true
+    },
+    "[typescript]": {
+        "editor.formatOnSave": true
+    },
+    "[typescriptreact]": {
+        "editor.formatOnSave": true
+    },
+    "[ruby]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "Shopify.ruby-lsp",
+        "editor.formatOnType": true,
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "files.trimTrailingWhitespace": true,
+        "files.insertFinalNewline": true,
+        "files.trimFinalNewlines": true,
+        "editor.rulers": [
+            120
+        ],
+        "editor.semanticHighlighting.enabled": true,
+    },
+    "[markdown]":{
+        "editor.formatOnSave": false,
+        "editor.formatOnPaste": false,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.markdownlint": "never"
+        },
+    },
+    "vsicons.dontShowNewVersionMessage": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+        "source.fixAll.stylelint": "explicit"
+    },
+    "markdownlint.config": {
+        "MD001": false
+    },
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "codic.ACCESS_TOKEN": "A0ZAQKpAOm7KMGkLGv44UOS74j8qRqs7B8",
+    "workbench.colorTheme": "Spinel",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.minimap.enabled": false,
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/.rvm/**":true,
+        "**/node_modules/**": true,
+        "**/GoogleDrive/**":true,
+        "**/Dropbox/**":true,
+        "**/Pictures/**":true,
+        "**/*.log":true
+    },
+    "editor.inlineSuggest.enabled": true,
+    "editor.renderControlCharacters": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": true,
+        "plaintext": false,
+        "markdown": true
+    },
+    "workbench.editor.enablePreview": false,
+    "codic.case": "snake_case",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs":"active",
+    "workbench.colorCustomizations": {
+        "terminal.foreground": "#8b949e",
+        "terminal.background": "#101216",
+        "terminal.ansiBlack": "#000000",
+        "terminal.ansiBlue": "#6ca4f8",
+        "terminal.ansiCyan": "#2b7489",
+        "terminal.ansiGreen": "#56d364",
+        "terminal.ansiMagenta": "#db61a2",
+        "terminal.ansiRed": "#f78166",
+        "terminal.ansiWhite": "#ffffff",
+        "terminal.ansiYellow": "#e3b341",
+        "terminal.ansiBrightBlack": "#4d4d4d",
+        "terminal.ansiBrightBlue": "#6ca4f8",
+        "terminal.ansiBrightCyan": "#2b7489",
+        "terminal.ansiBrightGreen": "#56d364",
+        "terminal.ansiBrightMagenta": "#db61a2",
+        "terminal.ansiBrightRed": "#f78166",
+        "terminal.ansiBrightWhite": "#ffffff",
+        "terminal.ansiBrightYellow": "#e3b341",
+        "terminal.selectionBackground": "#3b5070",
+        "terminalCursor.foreground": "#c9d1d9"
+    },
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.fontFamily": "MesloLGS Nerd Font",
+    "cSpell.userWords": [
+        "actiontext",
+        "activeadmin",
+        "activerecord",
+        "activestorage",
+        "carrierwave",
+        "codic",
+        "flexbugs",
+        "flowbite",
+        "hadolint",
+        "hljs",
+        "hotwired",
+        "importmap",
+        "locallhost",
+        "merriwether",
+        "Monokai",
+        "preact",
+        "Qiita",
+        "raty",
+        "readtime",
+        "rippleui",
+        "rubocop",
+        "shopname",
+        "sidekiq",
+        "solargraph",
+        "swiper",
+        "tailwindcss",
+        "trix",
+        "tubolinks",
+        "turbolinks",
+        "vite",
+        "worklogist",
+        "zenkaku"
+    ],
+    "editor.formatOnType": true,
+    "redhat.telemetry.enabled": true,
+    "vim.leader": " ",
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["s","s"],
+            "commands": [
+                ":split"
+            ]
+        },
+        {
+            "before": ["s", "v"],
+            "commands": [
+                ":vsplit"
+            ]
+        },
+        {
+            "before": ["s", "h"],
+            "after": [
+                "<C-w>","h"
+            ]
+        },
+        {
+            "before": ["s", "j"],
+            "after": [
+                "<C-w>","j"
+            ]
+        },
+        {
+            "before": ["s", "k"],
+            "after": [
+                "<C-w>","k"
+            ]
+        },
+        {
+            "before": ["s", "l"],
+            "after": [
+                "<C-w>","l"
+            ]
+        },
+        {
+            "before": ["<leader>"],
+            "after": [
+                "<C-w>","w"
+            ]
+        },
+        {
+            "before": ["<Tab>"],
+            "commands": [
+                ":tabnext"
+            ]
+        },
+        {
+            "before": ["<S-Tab>"],
+            "commands": [
+                ":tabprevious"
+            ]
+        },
+        {
+            "before": ["s"],
+            "after": [
+                "_s"
+            ]
+        },
+        {
+            "before": ["x"],
+            "after": [
+                "_x"
+            ]
+        },
+        {
+            "before": ["<leader>","c"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.commentLine",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["<leader>","l"],
+            "after": ["$"],
+        },
+        {
+            "before": ["<leader>","h"],
+            "after": ["^"],
+        },
+        {
+            "before": ["<leader>","m"],
+            "after": ["%"],
+        },
+        {
+            "before": ["<CR>"],
+            "after": [
+                "A","<Return>","<Esc>"],
+        },
+        {
+            "before": ["<leader>","r"],
+            "after": [
+                "<C-w>", "<C-r>"
+            ]
+        },
+        {
+            "before": ["u"],
+            "command": "undo"
+        },
+        {
+            "before": ["<C-r>"],
+            "command": "redo"
+        }
+    ],
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j","j"],
+            "after": ["<Esc>"],
+        },
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": ["<leader>", "l"],
+            "after": ["$"],
+        },
+        {
+            "before": ["<leader>", "h"],
+            "after": ["^"],
+        },
+        {
+            "before": ["<leader>", "m"],
+            "after": ["%"],
+        },
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["f","f"],
+            "after": ["leader","leader","leader","b","d","w"],
+        },
+        {
+            "before": [
+                "<Esc>"
+            ],
+            "commands": [
+                ":nohl"
+            ]
+        }
+    ],
+    "vim.visualstar": true,
+    "vim.autoindent": true,
+    "vim.hlsearch": true,
+    "vim.surround": true,
+    "vim.easymotion": true,
+    "vim.cursorStylePerMode.insert": "line",
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.autoSwitchInputMethod.enable": true,
+    "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.ABC",
+    "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/bin/true",
+    "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.variables":{
+        "lang": "ja",
+    },
+    "terminal.integrated.profiles.osx": {
+        "fish": {
+            "path": "/opt/homebrew/bin/fish",
+            "env": {
+                "LANG": "ja_JP.UTF-8"
+            },
+            "args": [
+                "-l"
+            ]
+        }
+    },
+    "terminal.integrated.defaultProfile.osx": "fish",
+    "rubyLsp.rubyVersionManager": "custom",
+    "rubyLsp.customRubyCommand": "eval \"$(rtx env -s fish)\"",
+    "rubyLsp.yjit": true
+}
