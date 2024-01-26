@@ -1,0 +1,16 @@
+{{- if ne .chezmoi.os "darwin" }}
+brew/Brewfile
+zshfiles/
+.config/alacritty/
+.config/sheldon/
+.config/vscode/
+.config/zellij/
+.config/fish/
+.config/starship.toml
+.zshrc
+.gitconfig
+.git-templates/
+{{- end }}
+{{- if ne .chezmoi.os "linux"}}
+.config/wezterm/
+{{- end }}
