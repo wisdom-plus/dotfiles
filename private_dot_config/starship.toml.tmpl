@@ -1,5 +1,5 @@
 {{- if eq .chezmoi.os "darwin" -}}
-{{- include "starship_darwin" -}}
+{{- include "private_dot_config/starship_darwin" -}}
 {{- else if eq .chezmoi.os "linux" -}}
-{{- include "starship_linux" -}}
+{{- include "private_dot_config/starship_linux" -}}
 {{- end -}}

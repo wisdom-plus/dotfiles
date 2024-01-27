@@ -6,7 +6,8 @@ zshfiles/
 .config/vscode/
 .config/zellij/
 .config/fish/
-.config/starship.toml
+.config/starship_linux
+.config/starship_darwin
 .zshrc
 .gitconfig
 .git-templates/
