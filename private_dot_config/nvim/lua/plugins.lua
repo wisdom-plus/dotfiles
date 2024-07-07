@@ -66,7 +66,6 @@ local plugins = {
   'glepnir/dashboard-nvim';
   'lewis6991/impatient.nvim';
   "petertriho/nvim-scrollbar";
-  'Shatur/neovim-session-manager';
   'famiu/bufdelete.nvim';
   'rcarriga/nvim-notify';
   'nmac427/guess-indent.nvim';
